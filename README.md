@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ecommerce Website
 
 ## Overview
@@ -46,3 +47,7 @@ ecommerce-website
 
 ## License
 This project is licensed under the MIT License.
+=======
+# WT_ASS
+WT LAB ASSIGNMENT 
+>>>>>>> 6c489d455d1242bc369ff4c0bccc6f5a212e08c5
