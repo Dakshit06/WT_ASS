@@ -1,0 +1,118 @@
+<html>
+<head>
+    <script lang="javascript">
+        function add() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a + b;
+            document.getElementById("c").value = c;
+        }
+        function sub() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a - b;
+            document.getElementById("c").value = c;
+        }
+        function mul() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a * b;
+            document.getElementById("c").value = c;
+        }
+        function div() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            var c = a / b;
+            document.getElementById("c").value = c;
+        }
+    <title padding >Calculator</title>
+   
+</script>
+</head>
+
+<body>
+    
+    <form name="b1">
+    
+ 
+  
+        <center>
+            <h1>Calculator</h1>
+            <style>
+                h1{
+                    color: blue;
+                    font-size: 50px;
+                    margin-top: 50px;
+                    
+                }
+                table{
+                    border: 2px solid black;
+                    padding: 10px;
+
+                    margin-top: 15px;
+                    
+                    background-color: rgb(204, 206, 225);
+                    color: rgb(211, 175, 17);
+                
+                }
+                input{
+                    padding: 10px;
+                    margin: 10px;
+                color: crimson;
+                size-adjust: 10px;
+                margin-top: auto;
+                }
+
+            </style>
+        <table>
+           
+            <tr>
+                    <input type="text" name="d"  size="50"
+                    id="a" placeholder="Enter Number">
+            </tr>
+            
+            
+            
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="b1.d.value += '1'">
+                    <input type="button" value="2" onclick="b1.d.value += '2'">
+                    <input type="button" value="3" onclick="b1.d.value += '3'">
+                    <input type="button" value="+" onclick="b1.d.value += '+'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="b1.d.value += '4'">
+                    <input type="button" value="5" onclick="b1.d.value += '5'">
+                    <input type="button" value="6" onclick="b1.d.value += '6'">
+                    <input type="button" value="-" onclick="b1.d.value += '-'">
+                </td>
+                </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="b1.d.value += '7'">
+                    <input type="button" value="8" onclick="b1.d.value += '8'">
+                    <input type="button" value="9" onclick="b1.d.value += '9'">
+                    <input type="button" value="*" onclick="b1.d.value += '*'">
+                </td>
+                </tr>
+            <tr>
+                <td>
+                    <input type="button" value="0" onclick="b1.d.value += '0'">
+                    <input type="button" value="." onclick="b1.d.value += '.'">
+                    <input type="button" value="/" onclick="b1.d.value += '/'">
+                </td>
+                </tr>   
+            <tr>
+                <td>
+                    <input type="button" value="C" onclick="b1.d.value = ''">
+                    <input type="button" value="=" onclick="b1.d.value = eval(b1.d.value)">
+                </td>
+            </tr>
+        
+        </table>
+
+    </center>
+    </form>
+</body>
