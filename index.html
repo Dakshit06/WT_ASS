@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStyle Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Internal CSS */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .category-card {
+            transition: transform 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#"><i class="fas fa-store"></i> TechStyle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="products.html#phones">Phones</a>
+                        <a class="dropdown-item" href="products.html#clothes">Clothes</a>
+                        <a class="dropdown-item" href="products.html#watches">Watches</a>
+                        <a class="dropdown-item" href="products.html#shoes">Shoes</a>
+                        <a class="dropdown-item" href="products.html#bags">Bags</a>
+                        <a class="dropdown-item" href="products.html#laptops">Laptops</a>
+                        <a class="dropdown-item" href="products.html#accessories">Accessories</a>
+                        <a class="dropdown-item" href="products.html#jewelry">Jewelry</a>
+                        <a class="dropdown-item" href="products.html#sports">Sports Equipment</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="products.html#sale">Sale Items</a>
+                        <a class="dropdown-item" href="products.html#new">New Arrivals</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover;">
+        <div class="container">
+            <h1 class="display-4">Welcome to TechStyle Store</h1>
+            <p class="lead">Your one-stop destination for latest smartphones and trendy fashion</p>
+            <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Categories</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="category-card card">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Smartphones">
+                    <div class="card-body text-center">
+                        <h3>Smartphones</h3>
+                        <p>Latest mobile devices from top brands</p>
+                        <a href="products.html#phones" class="btn btn-outline-primary">View Phones</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Fashion">
+                    <div class="card-body text-center">
+                        <h3>Fashion</h3>
+                        <p>Trendy clothing for all seasons</p>
+                        <a href="products.html#clothes" class="btn btn-outline-primary">View Fashion</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card card">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Bags">
+                    <div class="card-body text-center">
+                        <h3>Bags</h3>
+                        <p>Stylish bags and accessories</p>
+                        <a href="products.html#bags" class="btn btn-outline-primary">View Bags</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="category-card card">
+                    <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Watches">
+                    <div class="card-body text-center">
+                        <h3>Watches</h3>
+                        <p>Luxury and smart watches</p>
+                        <a href="products.html#watches" class="btn btn-outline-primary">View Watches</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="category-card card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Shoes">
+                    <div class="card-body text-center">
+                        <h3>Shoes</h3>
+                        <p>Sport and casual footwear</p>
+                        <a href="products.html#shoes" class="btn btn-outline-primary">View Shoes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Products</h2>
+        
+        <!-- Product Slider -->
+        <div id="productCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#productCarousel" data-slide-to="1"></li>
+                <li data-target="#productCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption">
+                        <h3>Latest Smartphones</h3>
+                        <p>Discover our collection of premium phones</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h3>Fashion Collection</h3>
+                        <p>Trending styles for every occasion</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h3>Special Offers</h3>
+                        <p>Limited time deals on selected items</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row mt-5">
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1603791239531-1dda55e194a6?w=300&auto=format" class="card-img-top" alt="iPhone">
+                    <div class="card-body">
+                        <h5 class="card-title">iPhone 13 Pro</h5>
+                        <p class="card-text"><strong>$999</strong></p>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300&auto=format" class="card-img-top" alt="Samsung">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung S21</h5>
+                        <p class="card-text"><strong>$899</strong></p>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=300&auto=format" class="card-img-top" alt="Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Casual Shirt</h5>
+                        <p class="card-text"><strong>$49</strong></p>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card product-card">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&auto=format" class="card-img-top" alt="Jeans">
+                    <div class="card-body">
+                        <h5 class="card-title">Denim Jeans</h5>
+                        <p class="card-text"><strong>$79</strong></p>
+                        <button class="btn btn-primary btn-block add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@techstyle.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
