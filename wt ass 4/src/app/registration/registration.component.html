@@ -1,0 +1,101 @@
+<div class="row justify-content-center align-items-center min-vh-100">
+  <div class="col-md-8 col-lg-6">
+    <div class="card shadow-lg border-0">
+      <div class="card-body p-5">
+        <div class="text-center mb-4">
+          <img src="https://img.icons8.com/color/96/000000/add-user-male.png" alt="register icon" class="mb-3">
+          <h2 class="fw-bold">Create Account</h2>
+          <p class="text-muted">Fill in your details to get started</p>
+        </div>
+
+        <div class="position-relative mb-4">
+          <div *ngIf="registrationSuccess" class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            Registration successful! Redirecting to login...
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName" placeholder="First Name" required>
+                <label for="firstName">First Name</label>
+                <div class="text-danger small" *ngIf="submitted && f['firstName'].errors">
+                  <div *ngIf="f['firstName'].errors['required']">First name is required</div>
+                  <div *ngIf="f['firstName'].errors['minlength']">Minimum 3 characters</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.lastName" placeholder="Last Name" required>
+                <label for="lastName">Last Name</label>
+                <div class="text-danger small" *ngIf="submitted && f['lastName'].errors">
+                  <div *ngIf="f['lastName'].errors['required']">Last name is required</div>
+                  <div *ngIf="f['lastName'].errors['minlength']">Minimum 2 characters</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" placeholder="Email" required>
+            <label for="email">Email address</label>
+            <div class="text-danger small" *ngIf="submitted && f['email'].errors">
+              <div *ngIf="f['email'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors['email']">Invalid email format</div>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="phone" name="phone" [(ngModel)]="user.phone" placeholder="Phone" required>
+            <label for="phone">Phone Number</label>
+            <div class="text-danger small" *ngIf="submitted && f['phone'].errors">
+              <div *ngIf="f['phone'].errors['required']">Phone number is required</div>
+              <div *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" placeholder="Password" required>
+                <label for="password">Password</label>
+                <div class="text-danger small" *ngIf="submitted && f['password'].errors">
+                  <div *ngIf="f['password'].errors['required']">Password is required</div>
+                  <div *ngIf="f['password'].errors['pattern']">Password must be strong</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" placeholder="Confirm Password" required>
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="text-danger small" *ngIf="submitted && (f['confirmPassword'].errors || registrationForm.hasError('mismatch'))">
+                  <div *ngIf="f['confirmPassword'].errors?.['required']">Please confirm password</div>
+                  <div *ngIf="registrationForm.hasError('mismatch')">Passwords don't match</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mb-3" [disabled]="loading">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm me-2"></span>
+            Create Account
+          </button>
+
+          <button type="button" class="btn btn-outline-secondary w-100 mb-3" (click)="onReset()">
+            Reset Form
+          </button>
+
+          <p class="text-center mb-0">
+            Already have an account? 
+            <a routerLink="/login" class="text-primary text-decoration-none">Login here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
